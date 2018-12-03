@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DownloadTestVC">
+            <connections>
+                <outlet property="progressLabel" destination="yHp-Cq-cLu" id="bth-fc-ysZ"/>
+                <outlet property="progressView" destination="Gp1-1G-Qhq" id="asl-HK-wJU"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Gp1-1G-Qhq">
+                    <rect key="frame" x="15" y="94" width="345" height="2"/>
+                </progressView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHp-Cq-cLu">
+                    <rect key="frame" x="175" y="126" width="24.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Lf-w5-8pQ">
+                    <rect key="frame" x="156.5" y="177" width="62" height="30"/>
+                    <state key="normal" title="开始下载"/>
+                    <connections>
+                        <action selector="clickDownloadStart:" destination="-1" eventType="touchUpInside" id="RRx-DN-hLJ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZg-bL-Rhq">
+                    <rect key="frame" x="15" y="607" width="345" height="30"/>
+                    <state key="normal" title="跳转"/>
+                    <connections>
+                        <action selector="clickSkip:" destination="-1" eventType="touchUpInside" id="UI2-PX-A81"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="yHp-Cq-cLu" firstAttribute="top" secondItem="Gp1-1G-Qhq" secondAttribute="bottom" constant="30" id="HbT-v7-QLU"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="cZg-bL-Rhq" secondAttribute="bottom" constant="30" id="IpB-Rx-cDM"/>
+                <constraint firstItem="cZg-bL-Rhq" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="15" id="WVT-Gr-m3g"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="cZg-bL-Rhq" secondAttribute="trailing" constant="15" id="Y8i-lL-ZPM"/>
+                <constraint firstItem="Gp1-1G-Qhq" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="30" id="bZM-nq-VJN"/>
+                <constraint firstItem="yHp-Cq-cLu" firstAttribute="centerX" secondItem="Gp1-1G-Qhq" secondAttribute="centerX" id="htp-w5-D1X"/>
+                <constraint firstAttribute="trailing" secondItem="Gp1-1G-Qhq" secondAttribute="trailing" constant="15" id="j7W-lT-WEd"/>
+                <constraint firstItem="Gp1-1G-Qhq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="jc2-qv-qMQ"/>
+                <constraint firstItem="8Lf-w5-8pQ" firstAttribute="top" secondItem="yHp-Cq-cLu" secondAttribute="bottom" constant="30" id="kgo-RQ-68v"/>
+                <constraint firstItem="8Lf-w5-8pQ" firstAttribute="centerX" secondItem="yHp-Cq-cLu" secondAttribute="centerX" id="ryB-Lz-gFZ"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+</document>

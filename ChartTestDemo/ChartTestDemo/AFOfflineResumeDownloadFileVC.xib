@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AFOfflineResumeDownloadFileVC">
+            <connections>
+                <outlet property="downloadBtn" destination="SgR-HD-Bj4" id="syP-RX-e8g"/>
+                <outlet property="progressLab" destination="uu5-UF-7zK" id="Crf-zM-85G"/>
+                <outlet property="progressView" destination="gad-4A-iuO" id="rDF-dN-xcb"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="gad-4A-iuO">
+                    <rect key="frame" x="15" y="94" width="345" height="2"/>
+                </progressView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="%0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uu5-UF-7zK">
+                    <rect key="frame" x="175.5" y="126" width="24.5" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SgR-HD-Bj4">
+                    <rect key="frame" x="155" y="177" width="64" height="64"/>
+                    <state key="normal" image="play">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <state key="selected" image="stop"/>
+                    <connections>
+                        <action selector="clickStartOrStopDownloading:" destination="-1" eventType="touchUpInside" id="D9X-eb-HtX"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1g-qa-2PY">
+                    <rect key="frame" x="171.5" y="607" width="31" height="30"/>
+                    <state key="normal" title="跳转"/>
+                    <connections>
+                        <action selector="clickPushActivitylndicatorView:" destination="-1" eventType="touchUpInside" id="FlR-7a-HyU"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="f1g-qa-2PY" secondAttribute="bottom" constant="30" id="2nF-AB-Uat"/>
+                <constraint firstItem="gad-4A-iuO" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="8HU-vp-VJb"/>
+                <constraint firstItem="SgR-HD-Bj4" firstAttribute="centerX" secondItem="uu5-UF-7zK" secondAttribute="centerX" id="9KB-O5-Wgl"/>
+                <constraint firstItem="uu5-UF-7zK" firstAttribute="centerX" secondItem="gad-4A-iuO" secondAttribute="centerX" id="B03-l8-jYQ"/>
+                <constraint firstItem="f1g-qa-2PY" firstAttribute="centerX" secondItem="SgR-HD-Bj4" secondAttribute="centerX" id="C7X-dJ-lt2"/>
+                <constraint firstItem="SgR-HD-Bj4" firstAttribute="top" secondItem="uu5-UF-7zK" secondAttribute="bottom" constant="30" id="N3i-pf-Jrg"/>
+                <constraint firstItem="gad-4A-iuO" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="30" id="iJj-pC-6g8"/>
+                <constraint firstAttribute="trailing" secondItem="gad-4A-iuO" secondAttribute="trailing" constant="15" id="n50-tb-Wbz"/>
+                <constraint firstItem="uu5-UF-7zK" firstAttribute="top" secondItem="gad-4A-iuO" secondAttribute="bottom" constant="30" id="wkx-Ro-7zY"/>
+            </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="play" width="64" height="64"/>
+        <image name="stop" width="64" height="64"/>
+    </resources>
+</document>

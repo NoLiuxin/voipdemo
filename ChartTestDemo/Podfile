@@ -1,0 +1,18 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '9.0'
+
+target 'ChartTestDemo' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  use_frameworks!
+  pod 'AFNetworking'
+  pod 'SDWebImage'
+  pod 'Charts'
+  pod 'DZNEmptyDataSet'
+  pod 'YYKit'
+  pod 'NVActivityIndicatorView'
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
+  pod 'Moya'
+  pod 'JXCategoryView'
+  # Pods for ChartTestDemo
+end
